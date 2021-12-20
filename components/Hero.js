@@ -8,7 +8,7 @@ const Hero = () => {
       <div className="absolute top-1/2 w-full text-center">
         <p className="text-sm sm:text-lg font-bold">Not sure where to go? Perfect.</p>
         <button className="bg-white text-purple-500 px-10 py-4 rounded-full shadow-md font-bold my-3 hover:shadow-lg active:scale-90 transition duration-200">
-          I'm flexible
+          I&apos;m flexible
         </button>
       </div>
     </div>
