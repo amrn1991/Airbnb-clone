@@ -4,6 +4,7 @@ import Hero from '../components/Hero';
 import SmallCard from '../components/SmallCard';
 import MediumCard from '../components/MediumCard';
 import LargeCard from '../components/LargeCard';
+import Footer from '../components/Footer';
 
 export default function Home({ exploreData, cardInfo }) {
   return (
@@ -51,6 +52,8 @@ export default function Home({ exploreData, cardInfo }) {
           buttonText="Get Inspired"
         />
       </main>
+
+      <Footer />
     </div>
   );
 }
