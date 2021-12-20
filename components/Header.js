@@ -15,6 +15,7 @@ const Header = () => {
       <div className="flex relative h-10 cursor-pointer items-center my-auto">
         <Image
           src="/logo.png"
+          alt="buisness logo"
           layout="fill"
           objectFit="contain"
           objectPosition="left"

@@ -7,6 +7,7 @@ const LargeCard = ({ image, title, buttonText, description }) => {
       <div className="relative h-96 min-w-[300px]">
         <Image
           src={image}
+          alt={title}
           layout="fill"
           className="rounded-2xl"
           objectFit="cover"
