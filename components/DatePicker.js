@@ -3,8 +3,9 @@ import 'react-date-range/dist/styles.css';
 import 'react-date-range/dist/theme/default.css';
 import { DateRangePicker } from 'react-date-range';
 import { UsersIcon } from '@heroicons/react/solid';
+import { useRouter } from 'next/router';
 
-const DatePicker = ({onClear}) => {
+const DatePicker = ({searchInput, onClear}) => {
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState('');
   const [numGuests, setNumGuests] = useState(1);
@@ -17,6 +18,18 @@ const DatePicker = ({onClear}) => {
     setStartDate(ranges.selection.startDate);
     setEndDate(ranges.selection.endDate);
   };
+  const router = useRouter();
+  const search = () => {
+    router.push({
+      pathname: '/search',
+      query: {
+        location: searchInput,
+        startDate: startDate.toISOString(),
+        endDate: endDate.toISOString(),
+        numGuests
+      }
+    })
+  }
 
   return (
     <div className="flex flex-col col-span-3 mx-auto">
@@ -44,7 +57,7 @@ const DatePicker = ({onClear}) => {
         >
           Cancel
         </button>
-        <button className="flex-grow text-red-400">Search</button>
+        <button className="flex-grow text-red-400" onClick={search}>Search</button>
       </div>
     </div>
   );
