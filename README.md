@@ -2,6 +2,8 @@
 
 This is an only-UI website designed with Next.js and Tailwind CSS
 
+[Live Demo](https://airbnb-clone-beige-omega.vercel.app/)
+
 ## Installation
 
 Use [npm](https://nodejs.org/en/download/) to install this project locally.
