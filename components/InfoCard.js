@@ -13,12 +13,12 @@ const InfoCard = ({
   total,
 }) => {
   return (
-    <div className="flex py-7 px-2 pr-4 border-b cursor-pointer hover:shadow-lg hover:opacity-80 first:border-t">
-      <div className="relative h-24 w-40 md:h-52 md:w-80 flex-shrink-0">
+    <div className="flex flex-col sm:flex-row py-7 px-2 pr-4 border-b cursor-pointer hover:shadow-lg hover:opacity-80 first:border-t">
+      <div className="relative h-32 w-60 md:h-52 md:w-80 flex-shrink-0">
         <Image src={img} alt={title} layout="fill" objectFit="cover" className='rounded-2xl' />
       </div>
 
-      <div className="flex flex-col flex-grow pl-5">
+      <div className="flex flex-col flex-grow mt-4 sm:pl-5 sm:mt-0">
         <div className="flex justify-between">
           <p>{location}</p>
           <HeartIcon className="h-7 cursor-pointer" />

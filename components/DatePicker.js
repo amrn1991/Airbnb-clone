@@ -32,7 +32,7 @@ const DatePicker = ({searchInput, onClear}) => {
   }
 
   return (
-    <div className="flex flex-col col-span-3 mx-auto">
+    <div className="flex flex-col col-span-3 mx-auto order-5">
       <DateRangePicker
         ranges={[selectionRange]}
         minDate={new Date()}

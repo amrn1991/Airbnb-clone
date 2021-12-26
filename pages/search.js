@@ -2,6 +2,7 @@ import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import InfoCard from '../components/InfoCard';
+import Map from '../components/Map';
 import { useRouter } from 'next/router';
 import { format } from 'date-fns';
 
@@ -22,11 +23,20 @@ const Search = ({ rooms }) => {
 
       <main className="flex">
         <section className="flex-grow pt-14 px-6">
-          <p className="text-xs">
-            300+ stays / {range} / for {numGuests} guests
+          <p className="text-xs mb-4">
+            300+ stays{` / `}
+            <span className="text-xs rounded-full bg-green-200 p-2">
+              {formattedStartDate}
+            </span>
+            {` - `}
+            <span className="text-xs rounded-full bg-green-200 p-2">
+              {formattedEndDate}
+            </span>
+            {' / '}
+            for {numGuests} guests
           </p>
-          <h1 className="text-3xl font-semibold mt-2 mb-6">
-            Stays In {location}
+          <h1 className="text-3xl capitalize ont-semibold mt-2 mb-6">
+            stays in {location}
           </h1>
 
           <div className="hidden lg:inline-flex mb-5 space-x-3 text-gray-800 whitespace-nowrap">
@@ -51,6 +61,10 @@ const Search = ({ rooms }) => {
               />
             ))}
           </div>
+        </section>
+
+        <section className="hidden xl:inline-flex xl:min-w-[600px]">
+          <Map searchResults={rooms} />
         </section>
       </main>
 
